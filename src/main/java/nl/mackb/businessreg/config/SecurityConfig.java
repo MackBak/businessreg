@@ -24,7 +24,7 @@ public class SecurityConfig {
                 )
                 .authorizeHttpRequests(auth -> auth
                         // Allow unauthenticated access for API and H2 console
-                        .requestMatchers("/api/", "/h2-console/**").permitAll()
+                        .requestMatchers("/api/**", "/h2-console/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .httpBasic(Customizer.withDefaults()); // Basic auth for other endpoints
