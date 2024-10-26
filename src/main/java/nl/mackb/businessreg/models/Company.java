@@ -39,6 +39,7 @@ public class Company {
     @Column(length = MAX_GENERAL_CHARS, nullable = false)
     private String companyType;
 
+    @Column(nullable = false)
     private LocalDate startDate;
 
 }
